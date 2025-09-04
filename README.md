@@ -1,6 +1,6 @@
-# URLhaus Explorer
+# URLhaus-GUI
 
-A modern, responsive web application for exploring and analyzing malicious URLs from the URLhaus database. Built with React, TypeScript, and Material-UI, this tool provides security researchers and analysts with an intuitive interface to search, filter, and export threat intelligence data.
+A web application for exploring and analyzing malicious URLs from the URLhaus database. Built with React, TypeScript, and Material-UI, this tool provides security researchers and analysts with an intuitive interface to search, filter, and export threat intelligence data.
 
 ## 🚀 Features
 
@@ -21,19 +21,21 @@ A modern, responsive web application for exploring and analyzing malicious URLs 
 - **Smart Caching**: Persistent data storage across browser sessions
 - **New Entry Highlighting**: Visual indicators for recently added threats
 - **Countdown Timer**: Clear indication of next available refresh
+- **Auto-dismiss Notifications**: Error messages with automatic cleanup
 
 ### 🛡️ **Security & Authentication**
 - **API Key Authentication**: Secure access to URLhaus API
 - **Session Management**: Persistent authentication with secure logout
 - **Rate Limiting**: Built-in protection against API abuse
-- **Error Handling**: Comprehensive error management with user-friendly notifications
+- **Error Handling**: Comprehensive error management with pill-shaped notifications and stacking
 
 ### 🎨 **Modern UI/UX**
 - **Material-UI Design**: Consistent, professional interface
 - **Responsive Layout**: Optimized for desktop and mobile devices
-- **Glassmorphism Effects**: Modern visual design elements
+- **Social Integration**: Facebook links for community engagement
+- **Modern Visual Design**: Clean, professional interface with subtle effects
 - **Smooth Animations**: Polished user interactions and transitions
-- **Dark/Light Theme Support**: Adaptive color schemes
+- **Audio Notifications**: Sound alerts for new threat entries
 
 ### 📱 **Detailed URL Analysis**
 - **Comprehensive Details**: Two-card layout for organized information display
@@ -56,14 +58,14 @@ A modern, responsive web application for exploring and analyzing malicious URLs 
 ### Prerequisites
 - Node.js 18+ 
 - npm or yarn
-- URLhaus API key
+- URLhaus Auth key
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/urlhaus-explorer.git
-   cd urlhaus-explorer
+   git clone https://github.com/VETEIS/urlhaus-gui.git
+   cd urlhaus-ui
    ```
 
 2. **Install dependencies**
@@ -72,7 +74,7 @@ A modern, responsive web application for exploring and analyzing malicious URLs 
    ```
 
 3. **Configure API proxy**
-   Update `vite.config.ts` to point to your URLhaus API endpoint:
+   Update `vite.config.ts` to point to your URLhaus Auth endpoint:
    ```typescript
    server: {
      proxy: {
@@ -103,8 +105,8 @@ npm run preview
 ## 📖 Usage
 
 ### Getting Started
-1. **Authentication**: Enter your URLhaus API key on the login screen
-2. **Search**: Use the search bar to find URLs or hosts
+1. **Authentication**: Enter your URLhaus Auth key on the login screen
+2. **Refresh**: Use the refresh or search bar to find URLs or hosts
 3. **Explore**: Click on any URL to view detailed threat information
 4. **Export**: Use the export button to download data in CSV or JSON format
 
@@ -116,6 +118,8 @@ npm run preview
 - **Refresh**: Manual refresh with 5-minute rate limiting
 - **Persistence**: Data persists across browser sessions
 - **New Entries**: Recently added threats are highlighted for easy identification
+- **Error Notifications**: Stacked pill-shaped error messages with auto-dismiss
+- **Audio Alerts**: Sound notifications for new threat entries
 
 ## 🔧 Configuration
 
@@ -180,7 +184,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/yourusername/urlhaus-explorer/issues) page
+1. Check the [Issues](https://github.com/VETEIS/urlhaus-gui/issues) page
 2. Create a new issue with detailed information
 3. Contact the maintainers
 
