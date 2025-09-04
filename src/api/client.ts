@@ -2,7 +2,9 @@ import axios from 'axios';
 
 export const createApiClient = (authKey: string | null) => {
   const instance = axios.create({
-    baseURL: '/urlhaus',
+    baseURL: import.meta.env.DEV 
+      ? 'http://localhost:3001/api/v1'  // Backend API in development
+      : '/urlhaus',                     // Vite proxy in production
     headers: authKey ? { 'Auth-Key': authKey } : {},
     timeout: 20000,
   });

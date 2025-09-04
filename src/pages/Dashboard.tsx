@@ -245,8 +245,8 @@ const Dashboard: React.FC = () => {
 		
 		try {
 			const api = createApiClient(authKey);
-			const { data } = await api.get('/api/v1/urls/recent/limit/20/');
-			const list: RecentUrlItem[] = data?.urls ?? data ?? [];
+			const { data } = await api.get('/recent?limit=20');
+			const list: RecentUrlItem[] = data?.data ?? data ?? [];
 			
 			setNewEntries(new Set());
 			localStorage.removeItem('urlhaus_new_entries');
@@ -385,28 +385,24 @@ const Dashboard: React.FC = () => {
 		try {
 			const api = createApiClient(authKey);
 			if (nextMode === 'url') {
-				const body = new URLSearchParams();
-				body.set('url', query.trim());
-				const { data } = await api.post('/api/v1/url/', body, {
-					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				const { data } = await api.post('/search/url', {
+					url: query.trim()
 				});
 				const item: RecentUrlItem = {
-					url: data?.url ?? query.trim(),
-					host: data?.host,
-					url_status: data?.url_status,
-					date_added: data?.date_added,
-					threat: data?.threat,
-					tags: data?.tags,
-					urlhaus_reference: data?.urlhaus_reference,
+					url: data?.data?.url ?? query.trim(),
+					host: data?.data?.host,
+					url_status: data?.data?.url_status,
+					date_added: data?.data?.date_added,
+					threat: data?.data?.threat,
+					tags: data?.data?.tags,
+					urlhaus_reference: data?.data?.urlhaus_reference,
 				};
 				setRows([item]);
 			} else {
-				const body = new URLSearchParams();
-				body.set('host', query.trim());
-				const { data } = await api.post('/api/v1/host/', body, {
-					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				const { data } = await api.post('/search/host', {
+					host: query.trim()
 				});
-				const list: RecentUrlItem[] = (data?.urls ?? []).map((u: RecentUrlItem) => ({
+				const list: RecentUrlItem[] = (data?.data ?? []).map((u: RecentUrlItem) => ({
 					...u,
 					host: u.host ?? query.trim(),
 				}));

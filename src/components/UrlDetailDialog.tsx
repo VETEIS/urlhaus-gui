@@ -72,14 +72,10 @@ const UrlDetailDialog: React.FC<Props> = ({ url, open, onClose }) => {
       setDetail(null);
       try {
         const api = createApiClient(authKey);
-        const body = new URLSearchParams();
-        body.set('url', url);
         setLoadingContext('Analyzing security data and threat intelligence...');
-        const { data } = await api.post<UrlDetail>('/api/v1/url/', body, {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        });
+        const { data } = await api.get(`/detail/${encodeURIComponent(url)}`);
         setLoadingContext('Processing payload information...');
-        setDetail(data);
+        setDetail(data?.data ?? data);
       } catch (e: any) {
         setError(e?.message ?? 'Failed to load');
       } finally {
