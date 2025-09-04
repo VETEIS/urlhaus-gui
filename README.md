@@ -274,5 +274,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**⚠️ Disclaimer**: This tool is designed for security research and threat analysis purposes. Users are responsible for complying with applicable laws and regulations when using this software.
-**⚠️ Disclaimer**: This tool is designed for security research and threat analysis purposes. Users are responsible for complying with applicable laws and regulations when using this software.
+**⚠️ Disclaimer**: This tool is designed for security research and threat analysis purposes. Users are responsible for complying with applicable laws and regulations when using this software. - @vete
