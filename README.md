@@ -2,21 +2,21 @@
 
 A full-stack web application for exploring and analyzing malicious URLs from the URLhaus database. Built with React, TypeScript, Material-UI, and Node.js, this tool provides security researchers and analysts with an intuitive interface to search, filter, and export threat intelligence data with intelligent caching and rate limiting.
 
-## 🚀 Features
+## Features
 
-### 🔍 **Advanced Search & Analysis**
+### **Advanced Search & Analysis**
 - **Dual Search Modes**: Automatic detection between URL and Host/IP search
 - **Real-time Search**: Instant results with intelligent query parsing
 - **Smart Detection**: Automatically determines search type based on input format
 - **Comprehensive Results**: Detailed threat information with visual indicators
 
-### 📊 **Interactive Dashboard**
+### **Interactive Dashboard**
 - **Modern Table Interface**: Sortable columns with fixed headers and smooth scrolling
 - **Visual Threat Indicators**: Color-coded status badges and threat level indicators
 - **Pagination**: Efficient data browsing with customizable page sizes
 - **Export Capabilities**: CSV and JSON export functionality
 
-### 🔄 **Real-time Updates**
+### **Real-time Updates**
 - **Manual Refresh System**: Rate-limited API calls (5-minute intervals)
 - **Intelligent Caching**: Redis-based caching with 5-minute TTL for recent URLs, 1-hour for searches
 - **New Entry Highlighting**: Visual indicators for recently added threats
@@ -24,14 +24,14 @@ A full-stack web application for exploring and analyzing malicious URLs from the
 - **Auto-dismiss Notifications**: Error messages with automatic cleanup
 - **Performance Optimization**: 80-90% reduction in API calls through smart caching
 
-### 🛡️ **Security & Authentication**
+### **Security & Authentication**
 - **API Key Authentication**: Secure access to URLhaus API through backend proxy
 - **Session Management**: Persistent authentication with secure logout
 - **Rate Limiting**: Built-in protection against API abuse (10 requests per 5 minutes)
 - **Error Handling**: Comprehensive error management with pill-shaped notifications and stacking
 - **Backend Security**: Helmet.js security headers, CORS protection, input validation
 
-### 🎨 **Modern UI/UX**
+### **Modern UI/UX**
 - **Material-UI Design**: Consistent, professional interface
 - **Responsive Layout**: Optimized for desktop and mobile devices
 - **Social Integration**: Facebook links for community engagement
@@ -39,14 +39,14 @@ A full-stack web application for exploring and analyzing malicious URLs from the
 - **Smooth Animations**: Polished user interactions and transitions
 - **Audio Notifications**: Sound alerts for new threat entries
 
-### 📱 **Detailed URL Analysis**
+### **Detailed URL Analysis**
 - **Comprehensive Details**: Two-card layout for organized information display
 - **Payload Information**: Detailed malware and file analysis
 - **Threat Intelligence**: Tags, blacklist status, and reputation data
 - **Abuse Reporting**: Integration with abuse complaint tracking
 - **Hash Analysis**: MD5, SHA256, and other cryptographic hashes
 
-## 🛠️ Technology Stack
+## Stack
 
 ### **Frontend**
 - **React 19** with TypeScript
@@ -64,7 +64,7 @@ A full-stack web application for exploring and analyzing malicious URLs from the
 - **Helmet.js** for security headers
 - **CORS** for cross-origin protection
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Node.js 18+** 
@@ -142,7 +142,7 @@ npm start
 # In another terminal: serve the frontend build
 ```
 
-## 📖 Usage
+## Usage
 
 ### Getting Started
 1. **Authentication**: Enter your URLhaus Auth key on the login screen
@@ -162,7 +162,7 @@ npm start
 - **Audio Alerts**: Sound notifications for new threat entries
 - **Intelligent Caching**: Automatic caching reduces API calls by 80-90%
 
-## 🔧 Configuration
+## Configuration
 
 ### Backend Environment Variables
 Create a `.env` file in the `backend/` directory:
@@ -181,7 +181,7 @@ REDIS_URL=redis://localhost:6379
 REDIS_PASSWORD=
 
 # JWT Configuration
-JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+JWT_SECRET=secreyyyt-ranii-syaaa
 JWT_EXPIRES_IN=7d
 
 # Rate Limiting
@@ -198,7 +198,7 @@ The backend implements intelligent rate limiting:
 - **General API calls**: 100 requests per 15 minutes per IP
 - **Caching**: Reduces actual API calls to URLhaus by 80-90%
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 urlhaus-ui/
@@ -228,16 +228,6 @@ urlhaus-ui/
 └── README.md             # This file
 ```
 
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ### Development Guidelines
 - Follow TypeScript best practices
 - Use Material-UI components consistently
@@ -249,7 +239,7 @@ We welcome contributions! Please follow these steps:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [URLhaus](https://urlhaus.abuse.ch/) for providing the threat intelligence API
 - [Material-UI](https://mui.com/) for the comprehensive component library
@@ -258,19 +248,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Redis](https://redis.io/) for intelligent caching
 - [Vite](https://vitejs.dev/) for the fast build tool
 
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions:
 
 1. Check the [Issues](https://github.com/VETEIS/urlhaus-gui/issues) page
 2. Create a new issue with detailed information
 3. Contact the maintainers
-
-## 🔗 Related Projects
-
-- [URLhaus API Documentation](https://urlhaus-api.abuse.ch/)
-- [Abuse.ch](https://abuse.ch/) - Threat intelligence platform
-- [Malware Bazaar](https://bazaar.abuse.ch/) - Malware sample database
 
 ---
 
